@@ -1,5 +1,5 @@
 let cities = [];
-let total_cities = 4;
+let total_cities = 3;
 
 let record_distance;
 let best_ever;
