@@ -1,7 +1,7 @@
 let cities = [];
-let total_cities = 5;
+let total_cities = 12;
 
-let pop_size = 300;
+let pop_size = 500;
 let population = [];
 let fitness = [];
 
@@ -12,7 +12,7 @@ let current_best;
 let status_p;
 
 function setup() {
-	createCanvas(400, 600);
+	createCanvas(800, 800);
 	let order = [];
 	for (let i = 0; i < total_cities; i++) {
 		let v = createVector(random(width), random(height / 2));
@@ -79,14 +79,6 @@ function cal_distance(points, order) {
 	return sum;
 }
 
-// function shuffle(a, num) {
-// 	for (let i = 0; i < num; i++) {
-// 		let index_a = floor(random(a.length));
-// 		let index_b = floor(random(b.length));
-// 		swap(a, index_a, index_b);
-// 	}
-// }
-
 function calculate_fitness() {
 	let current_record = Infinity;
 	for (let i = 0; i < population.length; i++) {
@@ -143,6 +135,7 @@ function cross_over(order_a, order_b) {
 	let start = floor(random(order_a.length));
 	let end = floor(random(start + 1, order_a.length));
 	let new_order = order_a.slice(start, end);
+	// let left = total_cities - new_order.length;
 
 	for (let i = 0; i < order_b.length; i++) {
 		let city = order_b[i];
