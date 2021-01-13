@@ -1,7 +1,7 @@
 let cities = [];
-let total_cities = 3;
+let total_cities = 5;
 
-let pop_size = 100;
+let pop_size = 300;
 let population = [];
 let fitness = [];
 
