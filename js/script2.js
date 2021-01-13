@@ -41,7 +41,5 @@ function draw() {
 }
 
 function swap(a, i, j) {
-	let temp = a[i];
-	a[i] = a[j];
-	a[j] = temp;
+	[a[i] ,a[j]] = [a[j], a[i]]
 }
